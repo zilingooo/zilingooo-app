@@ -12,20 +12,6 @@
   <link rel="apple-touch-icon" href="/zilingooo-app/icon-192.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/zilingooo-app/icon-192.png">
   <title>شروع با زینا</title>
-
-  <!-- OneSignal Web Push -->
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(function(OneSignal) {
-      OneSignal.init({
-        appId: "7b391e3e-0281-43e9-8fe7-26e5bbf7fbb3",
-        path: "/zilingooo-app/",
-        notifyButton: { enable: false }
-      });
-    });
-  </script>
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -1227,7 +1213,7 @@
       border-radius: 15px;
       border: 2px solid #ffc107;
       text-align: right;
-      display: none;
+      display: block;
     }
     .vpn-warning h4 {
       color: #d35400;
@@ -1292,22 +1278,6 @@
         <p class="vpn-warning-text" data-key="vpn_warning_text">
           برای ارسال موفقیت‌آمیز اطلاعات، لطفاً قبل از کلیک روی "ورود"، مطمئن شوید که به <strong>VPN یا فیلترشکن</strong> متصل هستید. بدون اتصال، اطلاعات شما ارسال نخواهد شد. 🙏
         </p>
-      </div>
-      <!-- درخواست مجوز نوتیفیکیشن -->
-      <div class="notification-permission-section" style="margin-top: 30px; padding: 20px; background: rgba(74, 222, 128, 0.1); border-radius: 15px; border: 1px solid #4ade80; text-align: right; display: none;">
-        <h4 style="color: #16a34a; margin: 0 0 15px 0; font-weight: 600;">🔔 اعلان‌های آموزشی را فعال کنید!</h4>
-        <p style="color: var(--text); line-height: 1.6; margin: 0 0 15px 0;">
-          برای دریافت اعلان‌های مهم — مثل زمان‌بندی کلاس‌ها، یادآوری تکالیف، اطلاعیه‌های فوری و برنامه‌های آینده — لطفاً به اپلیکیشن اجازه ارسال نوتیفیکیشن بدید.
-        </p>
-        <button class="btn enable-notifications-btn" style="background: linear-gradient(135deg, #16a34a, #15803d); margin: 0 auto; display: block;" data-action="enable-notifications">
-          ✅ فعال‌سازی اعلان‌ها
-        </button>
-        <!-- راهنمای فعال‌سازی دستی -->
-        <div class="notification-help" style="margin-top: 12px; font-size: 13px; color: #d97706; display: none;">
-          <strong>راهنمای فعال‌سازی:</strong><br>
-          • در کروم: منو (⋮) → تنظیمات → مجوزها → اعلان‌ها → دنبال آدرس <strong>zilingooo.github.io</strong> بگردید و «اجازه دادن» را انتخاب کنید.<br>
-          • در سافاری: تنظیمات → سایت‌ها → اعلان‌ها → آدرس <strong>zilingooo.github.io</strong> را پیدا کرده و وضعیت را به «اجازه دادن» تغییر دهید.
-        </div>
       </div>
     </div>
   </section>
@@ -1561,7 +1531,7 @@
       <h2 data-key="warnings_title">⚠️ لطفاً قبل از ثبت‌نام به این موارد توجه بفرمایید</h2>
       <div class="warning-item danger">
         <div class="warning-icon">❌</div>
-        <p data-key="warning1">در جریان باشید که بعد از ثبت‌نام و واریز مبلغ شهریه، هزینه کلاس عودت داده نمی‌شه</p>
+        <p data-key="warning1">در جریان باشید که بعد از ثبت‌نام و واریز مبلغ شهریه، تحت هیچ عنوانی هزینه کلاس عودت داده نمیشه حتی اگر در کلاس ها شرکت نکرده باشید پس لطفا تمام موارد را با دقت مطالعه نمایید و سپس تصمیم نهایی را بگیرید</p>
       </div>
       <div class="warning-item danger">
         <div class="warning-icon">❌</div>
@@ -1674,7 +1644,7 @@
         copy_card: "کپی",
         card_owner: "به نام: توسن منطقه آزاد (این یک حساب تجاری میباشد)",
         warnings_title: "⚠️ لطفاً قبل از ثبت‌نام به این موارد توجه بفرمایید",
-        warning1: "در جریان باشید که بعد از ثبت‌نام و واریز مبلغ شهریه، هزینه کلاس عودت داده نمی‌شه",
+        warning1: "در جریان باشید که بعد از ثبت‌نام و واریز مبلغ شهریه، تحت هیچ عنوانی هزینه کلاس عودت داده نمیشه حتی اگر در کلاس ها شرکت نکرده باشید پس لطفا تمام موارد را با دقت مطالعه نمایید و سپس تصمیم نهایی را بگیرید",
         warning2: "در صورت رعایت نکردن موارد ارسالی، عدم ثبت فیش به عهده خودتون هست",
         warning3: "در صورت ارسال فیش تقلبی، دسترسی شما برای همیشه از خدمات ما قطع خواهد شد",
         warning4: "برای شرکت در سطح یک انگلیسی، حتماً باید الفبا و مقدار کمی از دانش زبان انگلیسی لازمه",
@@ -1684,10 +1654,6 @@
         test_instruction_title: "📝 آزمون تعیین سطح",
         test_instruction_text: "برای شرکت در آزمون تعیین سطح، لطفاً سوالات و فایل‌های آزمون تعیین سطح را از پشتیبانی درخواست نمایید.",
         request_test_btn: "درخواست آزمون تعیین سطح 📩",
-        // Notification permission
-        notification_title: "🔔 اعلان‌های آموزشی را فعال کنید!",
-        notification_text: "برای دریافت اعلان‌های مهم — مثل زمان‌بندی کلاس‌ها، یادآوری تکالیف، اطلاعیه‌های فوری و برنامه‌های آینده — لطفاً به اپلیکیشن اجازه ارسال نوتیفیکیشن بدید.",
-        notification_button: "✅ فعال‌سازی اعلان‌ها",
         // 🔥 ترجمه‌های جدید برای هشدار VPN
         vpn_warning_title: "توجه مهم:",
         vpn_warning_text: "برای ارسال موفقیت‌آمیز اطلاعات، لطفاً قبل از کلیک روی \"ورود\"، مطمئن شوید که به <strong>VPN یا فیلترشکن</strong> متصل هستید. بدون اتصال، اطلاعات شما ارسال نخواهد شد. 🙏"
@@ -1790,10 +1756,6 @@
         test_instruction_title: "📝 Level Test",
         test_instruction_text: "To take the level test, please request the test questions and files from support.",
         request_test_btn: "Request Level Test 📩",
-        // Notification permission
-        notification_title: "🔔 Enable Educational Notifications!",
-        notification_text: "To receive important notifications — such as class schedules, homework reminders, urgent announcements, and upcoming events — please allow this app to send you notifications.",
-        notification_button: "✅ Enable Notifications",
         // 🔥 ترجمه‌های جدید برای هشدار VPN — انگلیسی (اختیاری)
         vpn_warning_title: "Note:",
         vpn_warning_text: "To ensure successful submission, please make sure you're connected to a <strong>VPN or proxy</strong>. Your data won’t be sent without it."
@@ -1801,7 +1763,7 @@
     };
     let currentLang = 'fa';
     let currentTheme = 'light';
-    let isTransitioning = false; // 🔥 جلوگیری از اجرای همزمان صفحات
+    let isTransitioning = false;
     // Mouse tracking for interactive background
     document.addEventListener('mousemove', (e) => {
       const x = (e.clientX / window.innerWidth) * 100;
@@ -1825,7 +1787,7 @@
       document.documentElement.setAttribute('dir', currentLang === 'fa' ? 'rtl' : 'ltr');
       document.documentElement.setAttribute('lang', currentLang);
       document.getElementById('langText').textContent = currentLang === 'fa' ? 'EN' : 'فا';
-      updateTranslations(); // این تابع خودش applySavedNameToIntro را فراخوانی می‌کند
+      updateTranslations();
       const langToggle = document.querySelector('.language-toggle');
       langToggle.style.transform = 'scale(0.9)';
       setTimeout(() => {
@@ -1864,34 +1826,14 @@
           element.placeholder = translations[currentLang][key];
         }
       });
-      // دوباره نام ذخیره‌شده را به intro اعمال کن تا متن ترجمه آن را بازنویسی نکند
       applySavedNameToIntro();
-      // نمایش هشدار VPN فقط در نسخه فارسی
-      const vpnWarning = document.querySelector('.vpn-warning');
-      if (vpnWarning) {
-        if (currentLang === 'fa') {
-          vpnWarning.style.display = 'block';
-        } else {
-          vpnWarning.style.display = 'none';
-        }
-      }
-      // نمایش درخواست نوتیفیکیشن فقط در نسخه فارسی
-      const notificationSection = document.querySelector('.notification-permission-section');
-      if (notificationSection) {
-        if (currentLang === 'fa') {
-          notificationSection.style.display = 'block';
-        } else {
-          notificationSection.style.display = 'none';
-        }
-      }
     }
-    // Enhanced page transitions — با جلوگیری از اجرای همزمان
+    // Enhanced page transitions
     function showPage(hideId, showId, callback) {
-      if (isTransitioning) return; // 🔥 جلوگیری از اجرای همزمان
+      if (isTransitioning) return;
       isTransitioning = true;
       const hideElement = document.getElementById(hideId);
       const showElement = document.getElementById(showId);
-      // مدیریت دکمه بازگشت — فقط در صفحه فرم ثبت‌نام مخفی بشه
       const backBtn = document.getElementById("backBtn");
       if (showId === 'signup-form') {
         backBtn.style.display = 'none';
@@ -1918,11 +1860,10 @@
         if (callback) callback();
         setTimeout(() => {
           isTransitioning = false;
-        }, 700); // کمی بیشتر از زمان انیمیشن
+        }, 700);
       }, 300);
     }
     window.onload = () => {
-      // مدیریت دکمه بازگشت — در صفحه فرم ثبت‌نام مخفی باشه
       if (document.getElementById("signup-form").style.display !== "none") {
         document.getElementById("backBtn").style.display = "none";
       } else {
@@ -2056,11 +1997,9 @@
     function initializeModernAudio() {
       audio = document.getElementById('courseAudio');
       if (!audio) return;
-      // Update total time when metadata loaded
       audio.addEventListener('loadedmetadata', () => {
         document.getElementById('totalTimeModern').textContent = formatTime(audio.duration);
       });
-      // Update progress and current time while playing
       audio.addEventListener('timeupdate', () => {
         if (audio.duration) {
           const progress = (audio.currentTime / audio.duration) * 100;
@@ -2068,12 +2007,10 @@
           document.getElementById('currentTimeModern').textContent = formatTime(audio.currentTime);
         }
       });
-      // Reset when ended
       audio.addEventListener('ended', () => {
         isPlaying = false;
         document.getElementById('playIconModern').textContent = '▶️';
       });
-      // Handle errors
       audio.addEventListener('error', () => {
         const player = document.querySelector('.audio-player-modern');
         if (player) {
@@ -2083,15 +2020,12 @@
             </div>`;
         }
       });
-      // Add click event to progress bar
       document.getElementById('progressBarModern').addEventListener('click', (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
         const pos = (e.clientX - rect.left) / rect.width;
         audio.currentTime = pos * audio.duration;
       });
-      // Play/Pause button
       document.getElementById('playPauseBtnModern').addEventListener('click', togglePlayPauseModern);
-      // Skip buttons
       document.getElementById('rewindBtn').addEventListener('click', () => {
         audio.currentTime = Math.max(0, audio.currentTime - 10);
       });
@@ -2099,7 +2033,6 @@
         audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 10);
       });
     }
-    // 🔥 تغییر تابع togglePlayPauseModern — ریست نشود موقع resume
     function togglePlayPauseModern() {
       if (!audio) {
         initializeModernAudio();
@@ -2109,7 +2042,6 @@
         audio.pause();
         document.getElementById('playIconModern').textContent = '▶️';
       } else {
-        // 🔥 فقط اگر currentTime صفر باشد یا پخش تمام شده، load() اجرا شود
         if (audio.currentTime === 0 || audio.ended) {
           audio.load();
         }
@@ -2126,208 +2058,13 @@
       const secs = Math.floor(seconds % 60);
       return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
     }
-    // ✅ تابع جدید: شماره‌گذاری پیام‌ها
     function getNextMessageNumber() {
       let count = localStorage.getItem('zizi_message_count');
       count = count ? parseInt(count) + 1 : 1;
       localStorage.setItem('zizi_message_count', count);
       return count;
     }
-    // درخواست مجوز نوتیفیکیشن — با راهنمای هوشمند
-    function requestNotificationPermission() {
-      const button = document.querySelector('[data-action="enable-notifications"]');
-      const helpSection = document.querySelector('.notification-help');
-      
-      if (!("Notification" in window)) {
-        if (button) {
-          button.innerHTML = currentLang === 'fa' 
-            ? '❌ مرورگر شما از اعلان پشتیبانی نمی‌کند' 
-            : '❌ Your browser does not support notifications';
-        }
-        return;
-      }
 
-      if (Notification.permission === "granted") {
-        showNotification();
-        if (button) {
-          button.innerHTML = currentLang === 'fa' 
-            ? '✅ اعلان‌ها فعال هستند!' 
-            : '✅ Notifications are enabled!';
-          button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-          setTimeout(() => {
-            button.innerHTML = '✅ فعال‌سازی اعلان‌ها';
-            button.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
-          }, 3000);
-        }
-        return;
-      }
-
-      if (Notification.permission === "denied") {
-        // نمایش راهنمای فعال‌سازی دستی
-        if (button) {
-          button.innerHTML = currentLang === 'fa'
-            ? '❗ <strong>اعلان‌ها مسدود شده‌اند</strong><br>برای فعال‌سازی، تنظیمات مرورگر را بررسی کنید.'
-            : '❗ <strong>Notifications blocked</strong><br>Check browser settings to enable.';
-          button.style.background = 'linear-gradient(135deg, #d97706, #b45309)';
-          button.disabled = true;
-        }
-        if (helpSection) {
-          helpSection.style.display = 'block';
-        }
-        return;
-      }
-
-      // درخواست مجوز برای اولین بار
-      Notification.requestPermission().then(permission => {
-        if (button) {
-          if (permission === "granted") {
-            showNotification();
-            button.innerHTML = currentLang === 'fa' 
-              ? '✅ اعلان‌ها فعال شدند!' 
-              : '✅ Notifications enabled!';
-            button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-          } else {
-            button.innerHTML = currentLang === 'fa'
-              ? '❗ اعلان‌ها رد شدند. برای فعال‌سازی، تنظیمات مرورگر را بررسی کنید.'
-              : '❗ Notifications denied. Check browser settings.';
-            button.style.background = 'linear-gradient(135deg, #dc2626, #b91c1c)';
-            if (helpSection) helpSection.style.display = 'block';
-          }
-          setTimeout(() => {
-            button.innerHTML = '✅ فعال‌سازی اعلان‌ها';
-            button.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
-            button.disabled = false;
-          }, 5000);
-        }
-      });
-    }
-
-    // ✅ نسخه جدید با تایم‌اوت
-    function requestNotificationPermission() {
-      const button = document.querySelector('[data-action="enable-notifications"]');
-      const helpSection = document.querySelector('.notification-help');
-
-      if (!button) return;
-
-      if (!("Notification" in window)) {
-        button.innerHTML = currentLang === 'fa' 
-          ? '❌ مرورگر شما از اعلان پشتیبانی نمی‌کند' 
-          : '❌ Your browser does not support notifications';
-        button.disabled = false;
-        button.style.opacity = '1';
-        return;
-      }
-
-      if (Notification.permission === "granted") {
-        showNotification();
-        updateButtonState('success');
-        return;
-      }
-
-      if (Notification.permission === "denied") {
-        updateButtonState('denied');
-        if (helpSection) helpSection.style.display = 'block';
-        return;
-      }
-
-      let permissionResolved = false;
-
-      const handlePermission = (permission) => {
-        if (permissionResolved) return;
-        permissionResolved = true;
-        button.disabled = false;
-        button.style.opacity = '1';
-
-        if (permission === "granted") {
-          showNotification();
-          updateButtonState('success');
-        } else {
-          updateButtonState('denied');
-          if (helpSection) helpSection.style.display = 'block';
-        }
-      };
-
-      Notification.requestPermission().then(handlePermission);
-
-      setTimeout(() => {
-        if (!permissionResolved) {
-          permissionResolved = true;
-          button.disabled = false;
-          button.style.opacity = '1';
-          updateButtonState('timeout');
-          if (helpSection) helpSection.style.display = 'block';
-        }
-      }, 3000);
-    }
-
-    function updateButtonState(state) {
-      const button = document.querySelector('[data-action="enable-notifications"]');
-      if (!button) return;
-      const originalText = '✅ فعال‌سازی اعلان‌ها';
-
-      if (state === 'success') {
-        button.innerHTML = currentLang === 'fa' ? '✅ اعلان‌ها فعال شدند!' : '✅ Notifications enabled!';
-        button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-        setTimeout(() => {
-          button.innerHTML = originalText;
-          button.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
-        }, 3000);
-      } else {
-        button.innerHTML = currentLang === 'fa'
-          ? '❗ اعلان‌ها مسدود شده‌اند'
-          : '❗ Notifications blocked';
-        button.style.background = 'linear-gradient(135deg, #d97706, #b45309)';
-        setTimeout(() => {
-          button.innerHTML = originalText;
-          button.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
-        }, 5000);
-      }
-    }
-
-    function showNotification() {
-      if (Notification.permission === "granted") {
-        const notification = new Notification("🎉 ممنون از شما!", {
-          body: "حالا اعلان‌های مهم رو از دست نمی‌دید!",
-          icon: "/zilingooo-app/icon-192.png"
-        });
-        notification.onclick = function() {
-          window.focus();
-        };
-      }
-    }
-
-    // 🔥 تابع جدید: درخواست نوتیفیکیشن در لحظه ارسال فرم
-    function confirmNotificationBeforeSubmit(callback) {
-      // اگر قبلاً مجوز داده، مستقیم ادامه بده
-      if (Notification.permission === "granted") {
-        callback();
-        return;
-      }
-      // اگر قبلاً رد کرده، فقط یک بار دیگه بپرس
-      if (Notification.permission === "denied") {
-        callback(); // ادامه بدون درخواست مجدد
-        return;
-      }
-      // اگر هنوز تصمیم نگرفته (default یا 'default')
-      const userChoice = confirm(
-        currentLang === 'fa'
-          ? "🔔 قبل از ادامه، می‌خواهید اعلان‌ها را فعال کنید؟\n(برای دریافت یادآوری کلاس‌ها، تکالیف و اطلاعیه‌های مهم)"
-          : "🔔 Before continuing, would you like to enable notifications?\n(For class reminders, homework, and important announcements)"
-      );
-      if (userChoice) {
-        // کاربر گفت بله — درخواست مجوز
-        Notification.requestPermission().then(permission => {
-          if (permission === "granted") {
-            showNotification();
-          }
-          // در هر صورت — حتی اگر deny کرد — ادامه بده
-          callback();
-        });
-      } else {
-        // کاربر گفت نه — مستقیم ادامه
-        callback();
-      }
-    }
     // Initialize everything
     document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
@@ -2336,16 +2073,15 @@
       setTimeout(() => {
         initializeModernAudio();
       }, 1000);
-      // اگر نام قبلاً ذخیره شده، مستقیم intro
       const savedName = localStorage.getItem("zizi_fullname");
       if (savedName) {
         applySavedNameToIntro();
         document.getElementById("signup-form").style.display = "none";
         document.getElementById("intro").style.display = "block";
       }
-      // 🔥 حذف لیسنر قبلی + افزودن جدید — جلوگیری از تکرار
+
       const registerForm = document.getElementById("registerForm");
-      const newSubmitHandler = function(e) {
+      const newSubmitHandler = async function(e) {
         e.preventDefault();
         const fullname = document.getElementById("fullname").value.trim();
         const telegramId = document.getElementById("telegramId").value.trim() || "ندارد";
@@ -2366,7 +2102,6 @@
         errorBox.textContent = "";
         errorBox.style.display = "none";
         
-        // 🔥 چک وضعیت اینترنت قبل از ارسال
         if (!navigator.onLine) {
           errorBox.textContent = currentLang === 'fa' 
             ? "🚫 اینترنت شما قطع است. لطفاً اتصال خود را بررسی کنید." 
@@ -2382,9 +2117,9 @@
 📱 موبایل: ${phone}
 💬 آیدی تلگرام: ${telegramId}`;
         const token = "8279174231:AAGifZPhMjOsa7dIpwdTclOTJmKI1YqyCnw";
-        const adminChatIds = ["99540583", "2029365209"]; // شما و همکارتان
+        const adminChatIds = ["99540583", "2029365209"];
 
-        // ارسال به هر دو چت
+        // ارسال به هر دو چت — با api.telegram.org
         const sendPromises = adminChatIds.map(chatId => {
           return fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
             method: "POST",
@@ -2393,53 +2128,44 @@
           });
         });
 
-        Promise.all(sendPromises)
-          .then(() => {
-            localStorage.setItem("zizi_fullname", fullname);
-            applySavedNameToIntro();
-            // 🔥 قبل از ادامه، درخواست نوتیفیکیشن
-            confirmNotificationBeforeSubmit(() => {
-              showPage('signup-form', 'intro');
-              registerForm.reset(); // 🔥 ریست فرم بعد از ارسال موفق
-              // نمایش درخواست نوتیفیکیشن بعد از ثبت‌نام موفق
-              setTimeout(() => {
-                const notificationSection = document.querySelector('.notification-permission-section');
-                if (notificationSection) {
-                  notificationSection.style.display = 'block';
-                }
-              }, 1000);
-            });
-          })
-          .catch(err => {
-            console.error(err);
-            errorBox.textContent = "❌ مشکلی در ارسال اطلاعات پیش آمد. دوباره تلاش کنید.";
-            errorBox.style.display = "block";
-          });
+        // ارسال به هر دو چت — موفقیت یکی کافی است
+        let atLeastOneSuccess = false;
+        const results = await Promise.allSettled(sendPromises);
+        for (const result of results) {
+          if (result.status === 'fulfilled') {
+            try {
+              const json = await result.value.json();
+              if (json && json.ok) {
+                atLeastOneSuccess = true;
+              }
+            } catch (e) {
+              // اگر پاسخ JSON نبود، فرض می‌کنیم موفق بوده
+              atLeastOneSuccess = true;
+            }
+          }
+        }
+
+        if (atLeastOneSuccess) {
+          localStorage.setItem("zizi_fullname", fullname);
+          applySavedNameToIntro();
+          showPage('signup-form', 'intro');
+          registerForm.reset();
+        } else {
+          errorBox.textContent = "❌ ارسال اطلاعات با شکست مواجه شد. لطفاً دوباره تلاش کنید.";
+          errorBox.style.display = "block";
+        }
       };
-      // 🔥 حذف هر لیسنر submit قبلی
+
+      // حذف لیسنر قبلی و افزودن جدید
       const oldListener = registerForm._submitHandler;
       if (oldListener) {
         registerForm.removeEventListener("submit", oldListener);
       }
-      // 🔥 تنظیم لیسنر جدید
-      registerForm.removeEventListener("submit", newSubmitHandler); // اول حذف کن (اگر بود)
+      registerForm.removeEventListener("submit", newSubmitHandler);
       registerForm.addEventListener("submit", newSubmitHandler);
-      registerForm._submitHandler = newSubmitHandler; // ذخیره برای حذف بعدی
-
-      // 🔥 لیسنر جهانی برای دکمه‌های فعال‌سازی نوتیفیکیشن
-      document.addEventListener('click', function(e) {
-        const button = e.target.closest('[data-action="enable-notifications"]');
-        if (button) {
-          e.preventDefault();
-          // غیرفعال کردن موقت دکمه
-          button.disabled = true;
-          button.style.opacity = '0.7';
-          button.textContent = currentLang === 'fa' ? 'در حال پردازش...' : 'Processing...';
-          
-          requestNotificationPermission(); // حالا این تابع خودش مدیریت فیدبک رو برعهده داره
-        }
-      });
+      registerForm._submitHandler = newSubmitHandler;
     });
+
     // Prevent zoom on double tap for iOS
     let lastTouchEnd = 0;
     document.addEventListener('touchend', function (event) {
@@ -2449,43 +2175,29 @@
       }
       lastTouchEnd = now;
     }, false);
-    // Add haptic feedback for supported devices
+
+    // Add haptic feedback
     function addHapticFeedback() {
       if ('vibrate' in navigator) {
         navigator.vibrate(50);
       }
     }
-    // Add haptic feedback to buttons
     document.addEventListener('click', (e) => {
       if (e.target.classList.contains('btn') || e.target.classList.contains('language-toggle') || e.target.classList.contains('theme-toggle')) {
         addHapticFeedback();
       }
     });
   </script>
-<script>
-  // Service Worker Registration
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/OneSignalSDKWorker.js')
-      .then(reg => {
-        console.log('✅ Service Worker Registered');
-        // تشخیص آپدیت Service Worker
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'activated') {
-              // اگر کاربر صفحه رو باز کرده بود، رفرش کن
-              if (navigator.serviceWorker.controller) {
-                console.log('🔄 New content available — reloading...');
-                window.location.reload();
-              }
-            }
-          });
-        });
-      })
-      .catch(err => {
-        console.error('❌ Service Worker Failed:', err);
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/zilingooo-app/sw.js')
+          .then((reg) => console.log('✅ Service Worker Registered'))
+          .catch((err) => console.error('❌ Service Worker registration failed:', err));
       });
-  }
-</script>
+    }
+  </script>
 </body>
 </html>
